@@ -18,13 +18,10 @@ public class CarsController {
     }
 
     @GetMapping(value = "/cars")
-    public String getCars(@RequestParam(defaultValue = "5", value = "count") int count,
+    public String getCars(@RequestParam(defaultValue = "5", value = "count", required = false) int count,
                           Model model) {
-        if (count >= 3) {
-            model.addAttribute("cars", carsService.getCarList());
-        } else {
-            model.addAttribute("cars", carsService.getCarList(count));
-        }
+        model.addAttribute("cars", carsService.getCarList(count));
+
         return "cars";
     }
 

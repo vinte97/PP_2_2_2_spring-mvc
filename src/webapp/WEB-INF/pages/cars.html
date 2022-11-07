@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -11,6 +11,7 @@ Car page <br>
         <td th:text="${car.getModelName}"></td>
         <td th:text="${car.getNumber}"></td>
         <td th:text="${car.getYear}"></td>
+
     </tr>
 </table>
 </body>
