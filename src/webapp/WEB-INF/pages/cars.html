@@ -5,6 +5,13 @@
     <title>Title</title>
 </head>
 <body>
-Car page
+Car page <br>
+<table border="1">
+    <tr th:each="car : ${cars}">
+        <td th:text="${car.getModelName}"></td>
+        <td th:text="${car.getNumber}"></td>
+        <td th:text="${car.getYear}"></td>
+    </tr>
+</table>
 </body>
 </html>
